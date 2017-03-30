@@ -1,0 +1,16 @@
+<header ng-include="'app/navigator/navigator.html'"></header>
+
+<div class="container">
+  <div class="jumbotron convas " ng-repeat="restaurant in restaurants">
+    <img ng-src="{{restaurant.thumb}}" class="img-rounded img-thumbnail " alt="Cinque Terre"/>
+    <div id=text_box>
+      <h2>{{"Name: " + restaurant.name}}</h2>
+      <div star-rating rating-value='restaurant.rate' max="5"></div>
+      <p>{{"Location: " + restaurant.address}}</p>
+      <p id=describtion>{{"Describtion: " + restaurant.describtion}}</p>
+    </div>
+  </div>
+  <div class="navbar navbar-default navbar-static-bottom">
+    <p class="navbar-text">Welcome to Potboy.com</p>
+  </div>
+</div>

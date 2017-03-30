@@ -1,0 +1,19 @@
+<header ng-include="'app/navigator/navigator.html'"></header>
+
+<div class="container">
+  <h1 id=logo>POT BOY</h1>
+  <div class="row" >
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4" ng-repeat="restaurant in restaurants">
+        <div class="thumbnail">
+          <img ng-src="{{restaurant.thumb}}" alt="..." >
+          <div class="caption">
+            <p id="name" role="button" ui-sref="restaurant({id: restaurant.id})">{{restaurant.name}}</p>
+            <div star-rating rating-value="restaurants[$index].rate" max="5"></div>
+            <p id="describe">{{restaurant.describtion}}</p>
+          </div>
+          <p id ="faver-btn"><a class="btn btn-primary" role="button" ng-click="favor(restaurant.id)">Add to Favor</a></p>
+        </div>
+    </div>
+  </div>
+  <div class="navbar navbar-default navbar-static-bottom"><p class="navbar-text">Welcome to Potboy.com</p></div>
+</div>
