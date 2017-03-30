@@ -10,6 +10,7 @@ angular.module('potApp.services', [])
       return resp.data;
     });
   }
+
   var getOne = function(id){
     return $http({
       method: 'GET',
@@ -19,6 +20,7 @@ angular.module('potApp.services', [])
       return resp.data;
     });
   }
+
   var searchRestaurants = function(area){
     return $http({
       method: 'GET',
@@ -28,6 +30,7 @@ angular.module('potApp.services', [])
       return resp.data;
     });
 	}
+
   return {
     getAll: getAll,
     getOne: getOne,

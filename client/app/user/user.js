@@ -4,16 +4,16 @@ angular.module('potApp.user',[])
   $scope.getProfile = function(){
     Auth.getUser()
       .then(function(user){
-        $scope.username = user.username;
+        $scope.username = user.username
       })
   }
   $scope.getFavor = function(){
     $q.all([Restaurants.getAll(), Auth.getUser()]).then(function(results) {
-      $scope.restaurants = [];
-      $scope.favorList = results[1].favor;
+      $scope.restaurants = []
+      $scope.favorList = results[1].favor
       for(i=0; i<results[0].length; i++){
         if($scope.favorList.includes(results[0][i].id)){
-          $scope.restaurants.push(results[0][i]);
+          $scope.restaurants.push(results[0][i])
         }
       }
     })

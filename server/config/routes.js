@@ -4,6 +4,7 @@ var helpers = require('./helpers.js');
 
 
 module.exports = function(app,express){
+
   app.post('/api/users/signin', userController.signin);
   app.post('/api/users/signup', userController.signup);
   app.get('/api/user', userController.getUser);
@@ -12,6 +13,7 @@ module.exports = function(app,express){
   app.get('/api/restaurant/:id', restaurantController.oneRestaurant);
   app.get('/api/restaurants/:area', restaurantController.searchRestaurant);
   app.post('/api/restaurants', userController.addFavor);
+
 
   app.use(helpers.errorLogger);
   app.use(helpers.errorHandler);

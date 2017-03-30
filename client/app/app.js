@@ -1,4 +1,4 @@
-angular.module ('potApp', [
+angular.module('potApp',[
   'potApp.services',
   'potApp.home',
   'potApp.restaurant',
@@ -11,61 +11,59 @@ angular.module ('potApp', [
 
 .config(function ($stateProvider, $urlRouterProvider, $qProvider, $httpProvider){
   $stateProvider
-    .state ('signin', {
+    .state('signin', {
       url: '/signin',
       templateUrl: 'app/auth/signin.html',
       controller: 'AuthController'
     })
-    .state ('signup', {
+    .state('signup', {
       url: '/signup',
       templateUrl: 'app/auth/signup.html',
       controller: 'AuthController',
     })
-    .state ('home', {
+    .state('home', {
       url: '/',
       templateUrl: 'app/home/home.html',
       controller: 'HomeController',
       authenticate: true
     })
-    .state ('navigator',{
+    .state('navigator',{
       templateUrl: 'app/navigator/navigator.html',
       controller: 'navController',
       authenticate: true
     })
-    .state ('restaurant', {
+    .state('restaurant', {
       url: '/restaurant/:id',
       templateUrl: 'app/restaurant/restaurant.html',
       controller: 'RestaurantController',
       authenticate: true
     })
-    .state ('search', {
+    .state('search', {
       url: '/search/:area',
       templateUrl: 'app/home/home.html',
       controller: 'searchController',
       authenticate: true
     })
-    .state ('user', {
+    .state('user', {
       url: '/user',
       templateUrl: 'app/user/user.html',
       controller: 'userController',
       authenticate: true
     })
-    .state ('user.profile', {
+    .state('user.profile', {
       url: '/user/profile',
       templateUrl: 'app/user/profile.html',
       controller: 'userController',
       authenticate: true
     })
-    .state ('user.favor', {
+    .state('user.favor', {
       url: '/user/favor',
       templateUrl: 'app/user/favor.html',
       controller: 'userController',
       authenticate: true
     })
     $urlRouterProvider.otherwise('/');
-
     $qProvider.errorOnUnhandledRejections(false);
-
     $httpProvider.interceptors.push('AttachTokens');
 })
 

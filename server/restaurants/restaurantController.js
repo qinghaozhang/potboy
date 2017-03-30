@@ -8,7 +8,7 @@ module.exports = {
   allRestaurants: function (req, res, next) {
     findAllRestaurants({})
     .then(function (restaurants) {
-      res.json(restaurants)
+      res.json(restaurants);
     })
     .fail(function (error) {
       next(error);
@@ -26,7 +26,8 @@ module.exports = {
   },
 
   searchRestaurant: function (req, res, next) {
-    findAllRestaurants({address: req.params.area})
+    var area = req.params.area;
+    findAllRestaurants({$text: {$search: area}})
     .then(function (restaurants) {
       res.json(restaurants);
     })

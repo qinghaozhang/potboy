@@ -1,17 +1,17 @@
 <header ng-include="'app/navigator/navigator.html'"></header>
 
 <div class="container">
+  <!--user profile information layout-->
   <div id="wrapper">
+    <!--user Page content -->
     <div id="page-content-wrapper">
       <div class="page-content" >
         <div class="jumbotron user-list" >
           <p><a class="btn btn-default" ui-sref="user.profile()" ng-click="getProfile()">Profile</a>
              <a class="btn btn-default" ui-sref="user.favor()" ng-click="getFavor()">Favors</a></p>
-              <div ui-view></div>
+             <div ui-view></div>
         </div>
-        <div class="navbar navbar-default navbar-static-bottom">
-          <p class="navbar-text">Welcome to Potboy.com</p>
-        </div>
+        <div class="navbar navbar-default navbar-static-bottom"><p class="navbar-text">Welcome to Potboy.com</p></div>
       </div>
     </div>
   </div>

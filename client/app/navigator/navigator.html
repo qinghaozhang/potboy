@@ -1,24 +1,27 @@
-<div class="container" ng-controller="navController">
+<div class='container' ng-controller='navController'>
   <nav class="navbar navbar-default">
+      <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="#" role button>Home</a></li>
         <li><a href="#" role button>About</a></li>
       </ul>
+      <!-- navbar-left will move the search to the left -->
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input class="form-control"  type="text" placeholder="Search" ng-model="inputData.area"/></div>
+          <input type="text" class="form-control" placeholder="Area Search" ng-model="inputData.area"/></div>
           <button ui-sref="search({area: inputData.area })" class="btn btn-default">
-            <span class="glyphicon glyphicon-search" aria-hidden=true></span></button>
+            <span class="glyphicon glyphicon-search" aria-hidden=true></span> </button>
       </form>
+      <!-- wecome text in navBar-->
       <div class="welcomeTag"> Welcome!
-        <a class="dropbtn" data-ng-model="username" ng-click="myFunction()" role="button">{{username}}</a>
+        <a data-ng-model='username' ng-click="myFunction()" class="dropbtn" role="button">{{username}}</a>
         <div id="myDropdown" class="dropdown-content">
           <a ui-sref='user()' role='button'>User</a>
           <a ng-click='signout()' role='button'>Logout</a>
         </div>
       </div>
-    </div>
+    </div><!-- /.navbar-collapse -->
   </nav>
 </div>
 

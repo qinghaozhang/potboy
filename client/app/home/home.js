@@ -11,11 +11,11 @@ angular.module('potApp.home',[])
       });
   };
   $scope.favor = function(id){
-    Auth.addFavor(id)
+    Auth.addFavor(id);
+    alert("Restaurant Added");
   }
   initializeLinks();
 })
-
 .directive('starRating', function () {
   return {
     restrict: 'A',

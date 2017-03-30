@@ -11,8 +11,6 @@
   font-weight: bold;
   font-size: 15em;
   border-style: outset;
-  margin-top: 0px;
-  background-color: white;
 }
 
 #faver-btn {
@@ -144,9 +142,9 @@ ul.rating {
   bottom: 0;
   left: 0;
   background-attachment: fixed;
-  background-size: 280px 280px;
+  background-size: 2280px 2280px;
   background-position: -80px -40px;
-  background-image: url('https://openclipart.org/image/2400px/svg_to_png/271855/HotPot-Synbol1.png');
+  background-image: url('http://www.777a7.com/img185/qvqoyjsegrkelvmtdwts.jpg');
   background-repeat: repeat;
 }
 .form-signin {
@@ -200,7 +198,7 @@ ul.rating {
   border-bottom-style: solid;
   border-left-style: solid;
   border-color: rgb(0,0,0);
-  border-top:1px solid rgba(0,0,0,0.08);
+  border-top:1px solid rgba(0,0,0,0.8);
 }
 .form-signin-heading {
   color: #fff;
