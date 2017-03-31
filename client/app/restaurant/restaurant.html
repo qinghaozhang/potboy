@@ -3,11 +3,10 @@
 <div class="container">
   <!--restaurant information layout-->
   <div class="jumbotron convas " ng-repeat="restaurant in restaurants">
-    <img ng-src="{{restaurant.thumb}}"
-         class="img-rounded img-thumbnail "
-         alt="Cinque Terre"/>
+    <img ng-src="{{restaurant.thumb}}" class="img-rounded img-thumbnail " alt="Cinque Terre"/>
     <div id=text_box>
       <h2>{{"Name: " + restaurant.name}}</h2>
+      <!-- show rating stars -->
       <div star-rating rating-value='restaurant.rate' max="5"></div>
       <p>{{"Location: " + restaurant.address}}</p>
       <p id=describtion>{{"Describtion: " + restaurant.describtion}}</p>

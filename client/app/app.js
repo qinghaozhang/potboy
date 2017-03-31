@@ -67,6 +67,7 @@ angular.module('potApp',[
     $httpProvider.interceptors.push('AttachTokens');
 })
 
+//interceptors token in every request
 .factory('AttachTokens', function ($window) {
   var attach = {
     request: function (object) {
@@ -81,6 +82,7 @@ angular.module('potApp',[
   return attach;
 })
 
+//keep checking authentication
 .run(function ($rootScope, $state, Auth) {
   $rootScope.$on('$stateChangeStart', function (event, toState) {
     if (toState.authenticate && !Auth.isAuth()) {

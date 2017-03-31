@@ -3,9 +3,11 @@ angular.module('potApp.navigator',[])
 .controller('navController', function($scope, $window, Restaurants, Auth){
   $scope.inputData = {}
   $scope.username = $window.localStorage['storageName'];
+  //sign out function
   $scope.signout = function () {
     Auth.signout();
   }
+  //show dropdown manu if user hover the user button
   $scope.myFunction = function() {
     document.getElementById("myDropdown").classList.toggle("show");
   }

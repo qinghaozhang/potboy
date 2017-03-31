@@ -1,9 +1,10 @@
 <div class="container">
-  <!--user profile information layout-->
+  <!--show favor list-->
   <div class="jumbotron favor-List" ng-repeat="restaurant in restaurants" role="button" ui-sref="restaurant({id: restaurant.id})">
     <div class="media-left media-top"><img ng-src="{{restaurant.thumb}}" alt="..."></div>
     <div class="media-body">
       <h3 class="media-heading">{{restaurant.name}}</h3>
+      <!-- show rating stars -->
       <div star-rating rating-value="restaurants[$index].rate" max="5"></div>
       <h5>{{'Address: ' + restaurant.address}}</h5>
       <h5>{{'Descrition: ' + restaurant.describtion}}</h5>

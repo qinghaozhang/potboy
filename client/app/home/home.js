@@ -1,6 +1,7 @@
 angular.module('potApp.home',[])
 
 .controller('HomeController',function($scope, Restaurants, Auth){
+  //get all restaurants
   var initializeLinks = function () {
     Restaurants.getAll()
       .then(function (restaurants) {
@@ -16,6 +17,7 @@ angular.module('potApp.home',[])
   }
   initializeLinks();
 })
+//set up rating stars
 .directive('starRating', function () {
   return {
     restrict: 'A',

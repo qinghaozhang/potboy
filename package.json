@@ -7,7 +7,10 @@
   "engines": {
     "node": ">=7.0.0"
   },
-  "scripts": {},
+  "scripts": {
+    "start": "grunt build && grunt upload",
+    "lint": "eslint ./"
+  },
   "dependencies": {
     "angular-image-dimensions": "^1.1.0",
     "angular-ui-router": "^0.4.2",
@@ -27,7 +30,6 @@
     "jsonwebtoken": "^7.3.0",
     "mongoose": "^4.1.0",
     "morgan": "^1.1.1",
-    "nodemon": "^1.11.0",
     "q": "^1.4.1",
     "request": "^2.36.0"
   }
