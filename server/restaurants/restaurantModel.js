@@ -16,6 +16,7 @@ mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 var Restaurant = mongoose.model('Restaurant', RestaurantSchema)
 
+//open mongoDB and insert fake data array
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once("open", function(){
   console.log("database connected")

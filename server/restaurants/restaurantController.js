@@ -5,6 +5,7 @@ var findAllRestaurants = Q.nbind(Restaurant.find, Restaurant);
 var findRestaurant = Q.nbind(Restaurant.findOne, Restaurant);
 
 module.exports = {
+  //send all restaurants
   allRestaurants: function (req, res, next) {
     findAllRestaurants({})
     .then(function (restaurants) {
@@ -14,7 +15,7 @@ module.exports = {
       next(error);
     });
   },
-
+  //send one restaurant by id
   oneRestaurant: function (req, res, next) {
     findRestaurant({id: req.params.id})
     .then(function (restaurant) {
@@ -24,7 +25,7 @@ module.exports = {
       next(error);
     });
   },
-
+  //send restaurants by area
   searchRestaurant: function (req, res, next) {
     var area = req.params.area;
     findAllRestaurants({$text: {$search: area}})

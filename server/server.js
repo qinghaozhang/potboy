@@ -3,11 +3,11 @@ var mongoose = require('mongoose');
 
 var app = express();
 
-// mongoose.connect(process.env.MONGODB_URI, function (error) {
-//     if (error) console.error(error);
-//     else console.log('mongo connected');
-// });
-mongoose.connect('mongodb://localhost/potboy');
+mongoose.connect(process.env.MONGODB_URI, function (error) {
+    if (error) console.error(error);
+    else console.log('mongo connected');
+});
+// mongoose.connect('mongodb://localhost/potboy');
 
 
 require('./config/middleware.js')(app, express);
